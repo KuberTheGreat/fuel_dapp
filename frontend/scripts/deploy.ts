@@ -13,7 +13,7 @@ async function main() {
   const provider = new Provider(PROVIDER_URL);
 
   // Load wallet from private key
-  const wallet = Wallet.fromPrivateKey("0x01edb39feeb4f9f694b6bfb5cd06c30753375ef0abd4279f7404c726e2c3f629", provider);
+  const wallet = Wallet.fromPrivateKey(process.env.PRIVATE_KEY, provider);
 
   // Read contract bytecode and ABI
   const bytecode = fs.readFileSync(BIN_PATH);
